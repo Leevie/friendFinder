@@ -29,6 +29,10 @@ Male
 
 ----
 
+![App in Action](./app/public/pics/appgif.gif)
+
+----
+
 
 ### Technology
 * JavaScript (of course!)
