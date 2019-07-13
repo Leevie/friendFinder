@@ -19,10 +19,16 @@ Male
 * /pics/male4.jpg
 * /pics/male5.jpg
 
+----
 
 ![Home Page](./app/public/pics/homepage.jpg)
 
+----
+
 ![Survey Page](./app/public/pics/survey.jpg)
+
+----
+
 
 ### Technology
 * JavaScript (of course!)
