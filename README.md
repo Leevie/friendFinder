@@ -2,7 +2,7 @@
 This is a mock friend finder app built using Node.js and Express.
 
 ## Demo
-Live working demo of the site:  herokulink
+Live working demo of the site:  https://ultra-friend-finder.herokuapp.com/
 
 Click on the link, enter your name (feel free to use a stock link for a your picture below, or supply your own), then take the survey!  
 
@@ -20,9 +20,9 @@ Male
 * /pics/male5.jpg
 
 
-![Home Page] (picofhome)
+![Home Page](./app/public/pics/homepage.jpg)
 
-![Survey Page] (picofsurvey)
+![Survey Page](./app/public/pics/survey.jpg)
 
 ### Technology
 * JavaScript (of course!)
