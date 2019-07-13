@@ -1,55 +1,52 @@
-var questArr = [
-    "This is the first question: ", "This is the second question: "
-]
-let questionIndex = 0;
-let questionCounter = 0;
 
-var iterateQuestion = function() {    
-        if(questionIndex >= questArr.length){
-           alert("All Done!"); // End Game Stuff
-        } else{
-        var someObj = questArray[questionIndex];
-        questionIndex++;
-        questionCounter++;
-        // gameScore();
-        askQuestions(someObj);
-        
-        }
+// Button Click
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+    var answerData = {
+        name: $("#name").val(),
+        pic: $("#friendpic").val(),
+        scores: [
+            $("#quest1").val(),
+            $("#quest2").val(),
+            $("#quest3").val(),
+            $("#quest4").val(),
+            $("#quest5").val(),
+            $("#quest6").val(),
+            $("#quest7").val(),
+            $("#quest8").val(),
+            $("#quest9").val(),
+            $("#quest10").val()
+        ]
     };
-
-$("#start").on("click", iterateQuestion);
-
-
-const gameScore = function(){  //displays score and timer
-    $("#scoreDiv").html("Time Left:  " + timeCounter + "<br>" + "Question Number: " + questionCounter + "<br>" + "Score:  " + scoreCounter);
-};
-
-const askQuestions = function(someObj) {
-
-    // timeClock = setInterval(function() {
-    //     timeCounter--
-    //     gameScore();
-    //     if (timeCounter === 0){
-    //         checkIf();
-    //     }
-    // }, 1000)
-
-    $("#qstDiv").empty();
-    $("#ansDiv").empty();
-    correctAns = someObj.correctAns();
-    console.log("What is correctAns here: " + correctAns);
+    
+    console.log(answerData);
 
 
-    $("#qstDiv").html(someObj.question);
-    // $("#ansDiv").html(someObj.answers[0] + "<br>" + someObj.answers[1] + "<br>" + someObj.answers[2] + "<br>" + someObj.answers[3]); //This works
-    // For Loop to assign values to questions
-    someList = $("<ul>")
-    someList.addClass("list-group");
-    $("#ansDiv").append(someList);
-    for(var j = 0; j < someObj.answers.length; j++) {
-        ansText = $("<li>");
-        ansText.addClass("list-group-item");
-        ansText.attr("answer-value", someObj.answers[j]);
-        $(".list-group").append(ansText);
-        ansText.html(someObj.answers[j]);
-    }
+    // Clear out Fields
+    $("#name").val(""),
+    $("#friendpic").val(""),
+    $("#quest1").val(""),
+    $("#quest2").val(""),
+    $("#quest3").val(""),
+    $("#quest4").val(""),
+    $("#quest5").val(""),
+    $("#quest6").val(""),
+    $("#quest7").val(""),
+    $("#quest8").val(""),
+    $("#quest9").val(""),
+    $("#quest10").val("")
+
+    console.log("before modal");
+
+    $.post("/api/friends", answerData, function(data) {
+        $("#friend-name").text(data.name);
+        $("#friendimg").attr("src", data.pic)
+        console.log("Got here!")
+        $("#ffinder-modal").modal("toggle");
+    })
+    
+
+
+
+})
+

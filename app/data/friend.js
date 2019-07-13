@@ -2,7 +2,7 @@ let friendDB =
     [
         {
             "name": "Ahmed",
-            "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+            "pic": "/pics/male1.jpg",
             "scores": [
                 5,
                 1,
@@ -18,7 +18,7 @@ let friendDB =
         },
         {
             "name": "Jane Doe - (pre-populated)",
-            "photo": "image place holder",
+            "pic": "/pics/female1.jpg",
             "scores": [
                 5,
                 1,
@@ -34,7 +34,7 @@ let friendDB =
         },
         {
             "name": "John Doe - (pre-populated)",
-            "photo": "image place holder",
+            "pic": "/pics/male2.jpg",
             "scores": [
                 5,
                 1,

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang='en'>
 <head>
 <meta charset='UTF-8'>
@@ -8,8 +8,11 @@
 <title>Document</title>
 
 <!-- Bootstrap CSS -->
-<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' integrity='sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS' crossorigin='anonymous'>
+<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css' >
 <link rel='stylesheet' href='style.css'>
+<!-- <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script> -->
+<script src="https://code.jquery.com/jquery.js"></script>
+
 
 
 
@@ -21,19 +24,35 @@
         <div class="container">
           <h1 class="display-4">Friend Finder Ultra!</h1>
           <hr class="my-4">
-          <p class="lead">find a friend with this app!</p>
+          <p class="lead">Take the Survey below to find a friend</p>
         </div>
     </div>
+
+
+
 
 <div class='row' id='middle-row'>
     <div id="survey-form">
             <div class="demo">
  
-                    <form action="#">                    </form>
+                    <!-- <form action="#">                    </form> -->
+                    <div class="card-body">
+                      <form class="needs-validation" novalidate>
+                        <h4><label for="name">Name (Required):</label></h4>
+                        <input type="text" id="name" class="form-control" required>
 
+                        <h4><label for="friendpic">Picture (link):</label></h4>
+                        <input type="link" id="friendpic" class="form-control" required>
+
+                        <div class="invalid-feedback">
+                          Please fill in your name.
+                        </div>
+                        <div class="valid-feedback">
+                          Looks good!
+                        </div>
                        
-                        <label for="number">How strongly do you feel about the number 1?</label>
-                        <select class="custom-select custom-select-sm">
+                        <label for="number1">How strongly do you feel about Broccoli?</label>
+                        <select id="quest1" class="custom-select custom-select-sm">
                                 <option selected>Open this select menu</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -43,8 +62,8 @@
                               </select>               
                      
                             
-                              <label for="number">How strongly do you feel about the number 2?</label>
-                              <select class="custom-select custom-select-sm">
+                              <label for="number2">How strongly do you feel about Bacon?</label>
+                              <select id="quest2" class="custom-select custom-select-sm">
                                     <option selected>Open this select menu</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -55,8 +74,8 @@
     
                             
                             
-                              <label for="number">How strongly do you feel about the number 3?</label>
-                              <select class="custom-select custom-select-sm">
+                              <label for="number3">How strongly do you feel about Steak?</label>
+                              <select id="quest3" class="custom-select custom-select-sm">
                                     <option selected>Open this select menu</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -66,8 +85,8 @@
                                   </select>               
     
                             
-                              <label for="number">How strongly do you feel about the number 4?</label>
-                              <select class="custom-select custom-select-sm">
+                              <label for="number4">How strongly do you feel about Chicken?</label>
+                              <select id="quest4" class="custom-select custom-select-sm">
                                     <option selected>Open this select menu</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -77,8 +96,8 @@
                                   </select>               
     
                             
-                              <label for="number">How strongly do you feel about the number 5?</label>
-                              <select class="custom-select custom-select-sm">
+                              <label for="number5">How strongly do you feel about Salad?</label>
+                              <select id="quest5" class="custom-select custom-select-sm">
                                     <option selected>Open this select menu</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -88,8 +107,8 @@
                                   </select>               
     
                             
-                              <label for="number">How strongly do you feel about the number 6?</label>
-                              <select class="custom-select custom-select-sm">
+                              <label for="number6">How strongly do you feel about Sandwiches?</label>
+                              <select id="quest6" class="custom-select custom-select-sm">
                                     <option selected>Open this select menu</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -99,8 +118,8 @@
                                   </select>               
     
                                   
-                                    <label for="number">How strongly do you feel about the number 7?</label>
-                                    <select class="custom-select custom-select-sm">
+                                    <label for="number7">How strongly do you feel about Hummus?</label>
+                                    <select id="quest7" class="custom-select custom-select-sm">
                                             <option selected>Open this select menu</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -110,8 +129,8 @@
                                           </select>               
              
                                   
-                                    <label for="number">How strongly do you feel about the number 8?</label>
-                                    <select class="custom-select custom-select-sm">
+                                    <label for="number8">How strongly do you feel about Pasta?</label>
+                                    <select id="quest8" class="custom-select custom-select-sm">
                                             <option selected>Open this select menu</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -121,8 +140,8 @@
                                           </select>               
             
                                   
-                                    <label for="number">How strongly do you feel about the number 9?</label>
-                                    <select class="custom-select custom-select-sm">
+                                    <label for="number9">How strongly do you feel about Pizza?</label>
+                                    <select id="quest9" class="custom-select custom-select-sm">
                                             <option selected>Open this select menu</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -132,57 +151,56 @@
                                           </select>               
             
                                   
-                                    <label for="number">How strongly do you feel about the number 10?</label>
-                                    <select class="custom-select custom-select-sm">
+                                    <label for="number10">How strongly do you feel about Salmon?</label>
+                                    <select id="quest10" class="custom-select custom-select-sm">
                                             <option selected>Open this select menu</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
                                             <option value="4">4</option>
                                             <option value="5">5</option>
-                                          </select>               
+                                          </select>        
+                                          
+                                          <div class="text-right">
+                                            <button type="submit" class="btn btn-primary btn-md" id="submit">
+                                              <span class="fa fa-fire"></span>Submit Choices</button>
+                                          </div>
+
+
             
-                          </form>
-      
-                     
+                          </form> <!-- Ends Form-->
                     </div>
+    </div> 
+</div>
+</div>  
+
+
+</div>
+
+
+<div id="ffinder-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title"><strong>Your Friend Match!!</strong></h2>
+            </div>
+            <div class="modal-body">
+                <h2 id="friend-name"></h2>
+                <img id="friendimg" src="" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
     </div>
 </div>
 
-</div>
-<!-- Optional JavaScript -->
-<script type="text/javascript">
-  // Question: What does this code do?
-  $("#add-btn").on("click", function(event) {
-    event.preventDefault();
-    var newCharacter = {
-      name: $("#name").val().trim(),
-      role: $("#role").val().trim(),
-      age: $("#age").val().trim(),
-      forcePoints: $("#force-points").val().trim()
-    };
 
-    // Question: What does this code do??
-    $.post("/api/characters", newCharacter)
-      .then(function(data) {
-        console.log("add.html", data);
-        alert("Adding character...");
-      });
-  });
-</script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js' integrity='sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut' crossorigin='anonymous'></script>
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js' integrity='sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k' crossorigin='anonymous'></script>
+<script src="./survey.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js'></script>
 </body>
 </html>
-
-
-
-
-
-
-  <!-- 
-
-    Not sure how to assign point values to questions
-  -->

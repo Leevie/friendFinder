@@ -25,3 +25,8 @@ fieldset {
   .overflow {
     height: 200px;
   }
+
+img {
+  width: 200px;
+}
+
